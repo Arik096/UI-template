@@ -1,0 +1,591 @@
+{{#extend layout title="form-elements" active="form-elements" path="../../" }}
+{{#content "content"}}
+<div class="flex flex-wrap">
+
+    <div class="w-full lg:w-2/4 lg:pr-4 md:px-4">
+        <div class="relative flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl">
+            <div class="flex justify-between flex-auto p-6 pb-0">
+                <div class="header-title">
+                    <h4 class="text-2xl font-medium text-black">Basic Form</h4>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="email">Email address:</label>
+                        <input type="email"
+                            class="block w-full px-4 py-2 text-base font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            id="email1">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="pwd">Password:</label>
+                        <input type="password"
+                            class="block w-full px-4 py-2 text-base font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            id="pwd">
+                    </div>
+                    <div class="mb-4 checkbox">
+                        <div class="block pl-6">
+                            <input
+                                class="float-left w-4 h-4 mt-1 -ml-6 bg-center bg-no-repeat border border-blue-500 rounded"
+                                type="checkbox" value="" id="flexCheckDefault3">
+                            <label class="text-gray-600 form-check-label" for="flexCheckDefault3">
+                                Remember me
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit"
+                        class="inline-block p-2 px-6 py-2 text-base font-normal text-center text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white">Submit</button>
+                    <button type="submit"
+                        class="inline-block p-2 px-6 py-2 text-base font-normal text-center text-white transition-all duration-500 ease-in-out bg-red-500 border border-red-500 rounded shadow-md hover:shadow-xl hover:bg-red-600 hover:text-white">cancel</button>
+                </form>
+            </div>
+        </div>
+        <div class="relative flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl">
+            <div class="flex justify-between flex-auto p-6 pb-0">
+                <div class="header-title">
+                    <h4 class="text-2xl font-medium text-black">Form Grid</h4>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="flex flex-auto">
+                        <div class="pr-3 lg:w-2/4">
+                            <input type="text"
+                                class="block w-full px-4 py-2 text-base placeholder-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                                placeholder="First name">
+                        </div>
+                        <div class="pl-3 lg:w-2/4">
+                            <input type="text"
+                                class="block w-full px-4 py-2 text-base placeholder-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                                placeholder="Last name">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="relative flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl">
+            <div class="flex justify-between p-6 pb-0">
+                <div class="header-title">
+                    <h4 class="text-2xl font-medium text-black">Input</h4>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="exampleInputText1">Input Text </label>
+                        <input type="text"
+                            class="block w-full px-4 py-2 text-base font-normal text-gray-600 bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            id="exampleInputText1" value="Mark Jhon" placeholder="Enter Name">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="exampleInputEmail3">Email Input</label>
+                        <input type="email"
+                            class="block w-full px-4 py-2 text-base text-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            id="exampleInputEmail3" value="markjhon@gmail.com" placeholder="Enter Email">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="exampleInputurl">Url Input</label>
+                        <input type="url"
+                            class="block w-full px-4 py-2 text-base text-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            id="exampleInputurl" value="https://tailwindui.com" placeholder="Enter Url">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="exampleInputphone">Teliphone Input</label>
+                        <input type="tel"
+                            class="block w-full px-4 py-2 text-base text-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            id="exampleInputphone" value="1-(555)-555-5555">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="exampleInputNumber1">Number Input</label>
+                        <input type="number"
+                            class="block w-full px-4 py-2 text-base text-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            id="exampleInputNumber1" value="2356">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="exampleInputPassword3">Password
+                            Input</label>
+                        <input type="password"
+                            class="block w-full px-4 py-2 text-base text-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            id="exampleInputPassword3" value="markjhon123" placeholder="Enter Password">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="exampleInputdate">Date Input</label>
+                        <input type="date"
+                            class="block w-full px-4 py-2 text-base text-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            id="exampleInputdate" value="2019-12-18">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="exampleInputmonth">Month Input</label>
+                        <input type="month"
+                            class="block w-full px-4 py-2 text-base text-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            id="exampleInputmonth" value="2019-12">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="exampleInputweek">Week Input</label>
+                        <input type="week"
+                            class="block w-full px-4 py-2 text-base text-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            id="exampleInputweek" value="2019-W46">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="exampleInputtime">Time Input</label>
+                        <input type="time"
+                            class="block w-full px-4 py-2 text-base text-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            id="exampleInputtime" value="13:45">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="exampleInputdatetime">Date and Time
+                            Input</label>
+                        <input type="datetime-local"
+                            class="block w-full px-4 py-2 text-base text-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            id="exampleInputdatetime" value="2019-12-19T13:45:00">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="exampleFormControlTextarea1">Example
+                            textarea</label>
+                        <textarea
+                            class="block w-full px-4 py-2 text-base font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            id="exampleFormControlTextarea1" rows="5"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="inline-block p-2 px-6 py-2 text-base font-normal text-center text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white">Submit</button>
+                    <button type="submit"
+                        class="inline-block p-2 px-6 py-2 text-base font-normal text-center text-white transition-all duration-500 ease-in-out bg-red-500 border border-red-500 rounded shadow-md hover:shadow-xl hover:bg-red-600 hover:text-white">cancel</button>
+                </form>
+            </div>
+        </div>
+        <div class="relative flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl">
+            <div class="flex justify-between p-6 pb-0">
+                <div class="header-title">
+                    <h4 class="text-2xl font-medium text-black">Input Size</h4>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="exampleInputText1">Small</label>
+                        <input
+                            class="block w-full px-4 py-1 text-base placeholder-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            type="text" placeholder=".form-control-sm" id="small" aria-label=".form-control-sm example">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="default">Default</label>
+                        <input
+                            class="block w-full px-4 py-2 text-base placeholder-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            type="text" placeholder=".form-control" id="default" aria-label=".form-control-sm example">
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="large">Large</label>
+                        <input
+                            class="block w-full px-4 py-4 text-base placeholder-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                            type="text" placeholder=".form-control-lg" id="large" aria-label=".form-control-lg example">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="relative flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl">
+            <div class="flex justify-between p-6 pb-0">
+                <div class="header-title">
+                    <h4 class="text-2xl font-medium text-black">Select Size</h4>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="exampleInputText1">Small</label>
+                        <select
+                            class="block w-full px-4 py-1 text-base text-gray-600 font-normal bg-white border rounded-md outline-none focus:border-blue-500 focus:shadow"
+                            aria-label=".form-select-sm example">
+                            <option selected="">Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="exampleInputText1">Default</label>
+                        <select
+                            class="block w-full px-4 py-2 text-base text-gray-600 font-normal bg-white border rounded-md outline-none focus:border-blue-500 focus:shadow"
+                            aria-label=".form-select-sm example">
+                            <option selected="">Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-600" for="exampleInputText1">Large</label>
+                        <select
+                            class="block w-full px-4 py-4 text-base text-gray-600 font-normal bg-white border rounded-md outline-none focus:border-blue-500 focus:shadow"
+                            aria-label=".form-select-sm example">
+                            <option selected="">Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--second col-->
+    <div class="w-full lg:w-2/4 lg:pl-4 md:px-4">
+        <div class="relative flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl">
+            <div class="flex justify-between flex-auto p-6 pb-0">
+                <div class="header-title">
+                    <h4 class="text-2xl font-medium text-black">Horizontal Form</h4>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="flex flex-wrap mb-4">
+                        <div class="flex-auto w-2/4">
+                            <label class="self-center flex-auto w-1/4 px-2 mb-0 control-label"
+                                for="email1">Email:</label>
+                            <input type="email"
+                                class="block w-full px-4 py-2 text-base font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                                id="email1" placeholder="Enter Your email">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap mb-4">
+                        <div class="flex-auto w-2/4">
+                            <label class="self-center flex-auto w-1/4 px-2 mb-0 control-label"
+                                for="pwd2">Password:</label>
+                            <input type="password"
+                                class="block w-full px-4 py-2 text-base font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                                id="pwd2" placeholder="Enter Your password">
+                        </div>
+                    </div>
+                    <div class="mb-4 checkbox">
+                        <div class="block pl-6">
+                            <input
+                                class="float-left w-4 h-4 mt-1 -ml-6 bg-center bg-no-repeat border border-blue-500 rounded"
+                                type="checkbox" value="" id="flexCheckDefault3">
+                            <label class="text-gray-600 form-check-label" for="flexCheckDefault3">
+                                Remember me
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <button type="submit"
+                            class="inline-block p-2 px-6 py-2 text-base font-normal text-center text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white">Submit</button>
+                        <button type="submit"
+                            class="inline-block p-2 px-6 py-2 text-base font-normal text-center text-white transition-all duration-500 ease-in-out bg-red-500 border border-red-500 rounded shadow-md hover:shadow-xl hover:bg-red-600 hover:text-white">cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="relative flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl">
+            <div class="flex justify-between flex-auto p-6 pb-0">
+                <div class="header-title">
+                    <h4 class="text-2xl font-medium text-black">Form row</h4>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="flex">
+                        <div class="w-full pr-3 sm:mx-1 lg:w-2/4">
+                            <input type="text"
+                                class="block w-full px-4 py-2 text-base placeholder-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                                placeholder="First name">
+                        </div>
+                        <div class="w-full pl-3 sm:mx-1 lg:w-2/4">
+                            <input type="text"
+                                class="block w-full px-4 py-2 text-base placeholder-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                                placeholder="Last name">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="relative flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl">
+            <div class="flex justify-between flex-auto p-6 pb-0">
+                <div class="header-title">
+                    <h4 class="text-2xl font-medium text-black">Input</h4>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="mb-4">
+                        <div class="mb-2"><label for="disabledTextInput" class="form-label">Disabled input</label></div>
+                        <input type="text" id="disabledTextInput"
+                            class="block w-full px-4 py-2 text-base placeholder-gray-600 font-normal bg-gray-200 border rounded outline-none form-control"
+                            placeholder="Mark John">
+                    </div>
+                    <div class="p-6">
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                            venenatis mollis, diam nibh finibus leo</p>
+                        <div class="flex flex-wrap mb-4">
+                            <div class="flex-auto w-2/4">
+                                <label class="self-center flex-auto w-1/4 px-2 mb-0 control-label"
+                                    for="email1">Email:</label>
+                                <input type="email"
+                                    class="block w-full px-4 py-2 text-base placeholder-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                                    id="email1" placeholder="Enter Your email">
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap mb-4">
+                            <div class="flex-auto w-2/4">
+                                <label class="self-center flex-auto w-1/4 px-2 mb-0 control-label"
+                                    for="pwd2">Password:</label>
+                                <input type="password"
+                                    class="block w-full px-4 py-2 text-base placeholder-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                                    id="pwd2" placeholder="Enter Your password">
+                            </div>
+                        </div>
+                        <div class="mb-4 checkbox">
+                            <div class="block pl-6">
+                                <input
+                                    class="float-left w-4 h-4 mt-1 -ml-6 bg-center bg-no-repeat border border-blue-500 rounded"
+                                    type="checkbox" value="" id="flexCheckDefault3">
+                                <label class="text-gray-600 form-check-label" for="flexCheckDefault3">
+                                    Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="flex mb-4">
+                            <button type="submit"
+                                class="inline-block p-2 px-6 py-2 mr-0.5 text-base font-normal text-center text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white">Submit</button>
+                            <button type="submit"
+                                class="inline-block p-2 px-6 py-2 ml-0.5 text-base font-normal text-center text-white transition-all duration-500 ease-in-out bg-red-500 border border-red-500 rounded shadow-md hover:shadow-xl hover:bg-red-600 hover:text-white">cancel</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="relative flex flex-col mb-8 text-gray-500 bg-white shadow-lg rounded-xl">
+        <div class="flex justify-between flex-auto p-6 pb-0">
+            <div class="header-title">
+                <h4 class="text-2xl font-medium text-black ">Input</h4>
+            </div>
+        </div>
+        <div class="p-6">
+            <div class="mb-4">
+                <div class="mb-2"><label for="disabledTextInput" class="form-label">Read Only</label></div>
+                <input type="text" id="disabledTextInput"
+                    class="block w-full px-4 py-2 text-base placeholder-gray-600 font-normal bg-gray-200 border rounded outline-none form-control focus:border-blue-500 focus:shadow"
+                    placeholder="Mark John">
+            </div>
+            <div class="mb-4">
+                <div class="mb-2"><label for="disabledTextInput" class="form-label">Input Color</label></div>
+                <input type="color"
+                    class="inline-block w-full px-4 py-1 bg-white border border-gray-300 rounded outline-none form-control focus:border-blue-500 focus:shadow"
+                    id="exampleInputcolor" value="#50b5ff">
+            </div>
+            <div>
+                <div class="mb-4">
+                    <div class="mb-2"><label for="disabledTextInput" class="form-label">Select Input</label></div>
+                    <select
+                        class="block w-full px-4 py-2 text-base text-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                        aria-label=".form-select-sm example">
+                        <option selected="">Select your age</option>
+                        <option value="1">0-18</option>
+                        <option value="2">18-26</option>
+                        <option value="3">26-46</option>
+                        <option value="2">46-60</option>
+                        <option value="3">Above 60</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <div class="mb-2"><label for="disabledTextInput" class="form-label">Select Input New</label></div>
+                    <select
+                        class="block w-full px-4 py-2 text-base text-gray-600 font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow"
+                        aria-label=".form-select-sm example">
+                        <option selected="">This is a placeholder</option>
+                        <option value="1">Choice 1</option>
+                        <option value="2">Choice 2</option>
+                        <option value="3">Choice 3</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <div class="mb-2"><label for="disabledTextInput" class="form-label">Default</label></div>
+                    <select
+                        class="block w-full px-4 py-2 text-base font-normal bg-white border rounded outline-none form-select focus:border-blue-500 focus:shadow"
+                        data-trigger="" name="choices-multiple-default" id="choices-multiple-default" multiple="">
+                        <option value="Choice 1" selected="">Choice 1</option>
+                        <option value="Choice 2">Choice 2</option>
+                        <option value="Choice 3">Choice 3</option>
+                        <option value="Choice 4" disabled="">Choice 4</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <div class="mb-2"><label for="disabledTextInput" class="form-label">Example multiple Select</label>
+                    </div>
+                    <select multiple=""
+                        class="block w-full px-4 py-2 text-base font-normal bg-white border rounded outline-none form-select focus:border-blue-500 focus:shadow"
+                        id="exampleFormControlSelect2">
+                        <option>select-1</option>
+                        <option>select-2</option>
+                        <option>select-3</option>
+                        <option>select-4</option>
+                        <option>select-5</option>
+                        <option>select-6</option>
+                        <option>select-7</option>
+                        <option>select-8</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    {{!-- <div class="mb-2"><label for="disabledTextInput" class="form-label">Range Input</label></div>
+                    <input type="range"
+                        class="block w-full px-4 py-2 text-base font-normal bg-white rounded outline-none form-range focus:border-blue-500"
+                        id="customRange1"> --}}
+                    <div class="mb-2"><label for="disabledTextInput" class="form-label">Range Input</label></div>
+                        {{!-- <div class="slider noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">
+                            <div class="noUi-base">
+                                <div class="noUi-connects"></div>
+                                <div class="noUi-origin" style="transform: translate(-500%, 0px); z-index: 4;"></div>
+                            </div>
+                        </div> --}}
+                         <input type="range"
+                        class="block w-full px-4 py-2 text-base font-normal bg-white rounded outline-none form-range focus:border-blue-500"
+                        id="customRange1">
+                </div>
+                <div class="mb-0.5">
+                    <label class="list-group-item">
+                        <input class="m-1 form-check-input" type="checkbox" value="">
+                        Default Checkbox
+                    </label>
+                </div>
+                <div class="mb-0.5">
+                    <label class="list-group-item">
+                        <input type="checkbox" class="m-1 form-check-input" id="customCheck6" checked="">
+                        Checked Checkbox
+                    </label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled="">
+                    <label class="form-check-label" for="disabledFieldsetCheck">
+                        Disabled Checkbox
+                    </label>
+                </div>
+
+                <div class="pl-1 mb-4">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked=""
+                        disabled="">
+                    <label class="form-check-label" for="flexCheckCheckedDisabled">
+                        Disabled checked checkbox
+                    </label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Default radio
+                    </label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input type="radio" class="form-check-input" name="bsradio" id="radio1" checked="">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Default checked radio
+                    </label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled"
+                        disabled="">
+                    <label class="form-check-label" for="flexRadioDisabled">
+                        Disabled radio
+                    </label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled"
+                        checked="" disabled="">
+                    <label class="form-check-label" for="flexRadioCheckedDisabled">
+                        Disabled checked radio
+                    </label>
+                </div>
+                <div class="pl-1 mb-4">
+                    <input type="radio" id="customRadio5" name="customRadio5" class="form-check-input" disabled=""
+                        checked="">
+                    <label class="form-check-label" for="customRadio5"> Selected and disabled radio</label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input type="radio" id="customRadio6" name="customRadio1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio6"> Default radio</label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                    <label class="form-check-label" for="flexCheckDefault2">
+                        Default checkbox
+                    </label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Checked checkbox
+                    </label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Disabled checkbox</label>
+                </div>
+                <div class="pl-1 mb-4">
+                    <input type="checkbox" class="form-check-input" id="customCheck8" checked="" disabled="">
+                    <label class="form-check-label" for="flexCheckCheckedDisabled11">
+                        Disabled checked checkbox
+                    </label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                        checked="">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Selected radio
+                    </label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input type="radio" class="form-check-input" name="bsradio1" id="radio4" disabled="">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Disabled radio
+                    </label>
+                </div>
+                <div class="pl-1 mb-4">
+                    <input type="radio" class="form-check-input" name="bsradio1" id="radio3" disabled="" checked="">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Selected and Disabled radio
+                    </label>
+                </div>
+                <div class="mb-0.5 pl-1">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
+                    <label class="pl-2 form-check-label" for="switch1">Default switch checkbox input</label>
+                </div>
+                <div class="mb-4">
+                    <div class="mb-2"><label for="customFile1" class="form-label custom-file-input">Choose file</label>
+                    </div>
+                    <input type="file" id="choose" class="block w-full text-xl font-normal border text-gray-500 rounded outline-none focus:border-blue-400 focus:shadow " aria-label="Large file input example">
+                </div>
+                <div class="mb-4">
+                    <div class="mb-2"><label for="customFile1" class="form-label custom-file-input">Example file
+                            input</label></div>
+                    <input type="file" id="choose" class="block w-full text-xl font-normal border text-gray-500 rounded outline-none focus:border-blue-400 focus:shadow " aria-label="Large file input example">
+                </div>
+                <div class="mb-4">
+                    <div class="mb-2"><label for="customFile1" class="form-label custom-file-input">Choose file</label>
+                    </div>
+                    <input type="file" id="choose" class="block w-full text-xl font-normal border text-gray-500 rounded outline-none focus:border-blue-400 focus:shadow " aria-label="Large file input example">
+                </div>
+                <div class="mb-4">
+                    <button type="submit"
+                        class="inline-block p-2 px-6 py-2 text-base font-normal text-center text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white">Submit</button>
+                    <button type="submit"
+                        class="inline-block p-2 px-6 py-2 text-base font-normal text-center text-white transition-all duration-500 ease-in-out bg-red-500 border border-red-500 rounded shadow-md hover:shadow-xl hover:bg-red-600 hover:text-white">cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{{/content}}
+{{/extend}}

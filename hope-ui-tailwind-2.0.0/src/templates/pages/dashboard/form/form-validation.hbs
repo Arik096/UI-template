@@ -1,0 +1,324 @@
+{{#extend layout title="form-validation" active="form-validation" path="../../" }}
+{{#content "scripts"}}
+<script src="{{path}}assets/js/form.js"></script>
+{{/content}}
+{{#content "content"}}
+
+<div class="flex flex-wrap">
+    <!--first col-->
+    <div class="w-full lg:w-2/4 lg:pr-3">
+        <div class="relative flex flex-col mb-8 bg-white rounded-lg shadow-lg">
+            <div class="flex justify-between flex-auto px-6 pt-6">
+                <div>
+                    <h4 class="text-2xl font-medium">Default Validation</h4>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                    vulputate, ex ac venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="flex flex-wrap">
+                        <div class="flex-auto lg:w-2/4 w-full lg:pr-4 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">First name</label>
+                            <input class="block w-full px-4 py-2 text-gray-600 border rounded outline-none focus:border-blue-500 focus:shadow" required/>
+                        </div>
+                        <div class="flex-auto lg:w-2/4 w-full lg:pl-4 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">Last name</label>
+                            <input class="block w-full px-4 py-2 text-gray-600 border rounded outline-none focus:border-blue-500 focus:shadow" required/>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <div class="flex-auto lg:w-2/4 w-full lg:pr-4 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">Username</label>
+                            <div class="relative flex items-stretch w-full ">
+                                <span class="flex items-center text-gray-600 px-4 py-2 border-t border-b border-l rounded whitespace-nowrap" id="basic-addon1">@</span>
+                                <input class="block w-full px-4 py-2 border outline-none text-gray-600 focus:border-blue-500 focus:shadow" required/>
+                            </div>
+                        </div>
+                        <div class="flex-auto lg:w-2/4 w-full lg:pl-4 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">City</label>
+                            <input class="block w-full px-4 py-2 text-gray-600 border rounded outline-none focus:border-blue-500 focus:shadow" required/>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <div class="flex-auto lg:w-2/4 w-full lg:pr-4 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">State</label>
+                            <div>
+                                <select
+                                    class="inline-block w-full text-gray-600 py-2 px-2 border rounded outline-none focus:border-blue-500 focus:shadow" required/>
+                                    <option selected="">Choose...</option>
+                                    <option value="1">...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex-auto lg:w-2/4 w-full lg:pl-4 mb-4">
+                            <label class="inline-block text-gray-600 mb-2">Zip</label>
+                            <input class="block w-full px-4 py-2 text-gray-600 border rounded outline-none focus:border-blue-500 focus:shadow" required/>
+                        </div>
+                    </div>
+                    <div class="mb-4 checkbox">
+                        <div class="pl-6 mb-4">
+                            <input
+                                class="float-left w-4 mt-1 h-4 -ml-6 border border-blue-500 rounded"
+                                type="checkbox" value="" id="CheckDefault" required/>
+                            <label class="text-gray-500" for="CheckDefault">Agree to terms and conditions
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <button type="submit"
+                            class="inline-block px-6 py-2 text-center text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:bg-blue-600 hover:text-white">
+                            Submit Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="relative flex flex-col mb-8 bg-white rounded-lg shadow-lg">
+            <div class="flex justify-between float-auto px-6 pt-6">
+                <div>
+                    <h4 class="text-2xl font-medium">Supported Elements</h4>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form id="form">
+                    <div class="mb-4">
+                        <label class="inline-block mb-2 text-gray-500">Textarea</label><br>
+                        <Textarea id="supportedtextarea"
+                            class="text-gray-500 textarea p-3 border outline-none border-red-400 rounded w-full is-invalid placeholder-gray-500"
+                            rows="2" cols="50" value="textarea" placeholder="Required example textarea"></Textarea>
+                        <p class="text-red-400 text-xs" id="supportedtextareahide">Please enter a message in the textarea.</p>
+                    </div>
+                    <div class="section3">
+                    <div class="mb-4 pl-6">
+                        <input class="supportedCheckbox float-left w-4 h-4 mt-1 -ml-6 bg-center bg-no-repeat border rounded"
+                            type="checkbox" value="" id="supportedCheckbox" onchange="isChecked()">
+                        <label class="text-red-400 form-check-label" for="supportedCheckbox"
+                            onchange="isChecked()" id="supportedcheckboxlabel">Check this checkbox<br>
+                            <h1 class="text-xs mt-1" id="supportedcheckboxhide">Example invalid feedback text</h1>
+                        </label>
+                    </div>
+                    <div class="mb-4 flex flex-col">
+                        <div>
+                            <input name="radio1" type="radio" id="supportedtogglebtn" onchange="isCheck()">
+                            <label class="mb-2 text-red-400" for="supportedtogglebtn" id="supportedradiobtnone">Toggle this radio</label>
+                        </div>
+                        <div>
+                            <input name="radio1" type="radio" id="supporttogglebtn" onchange="isCheck()">
+                            <label class="mb-2 text-red-400" for="supporttogglebtn" id="supportedradiobtntwo">Or toggle this other radio</label>
+                        </div>
+                        <h1 class="text-xs text-red-400 mt-1" id="supportedradiobtnhide">More example invalid feedback text</h1>
+                    </div>
+                    </div>
+                    <div class="mb-4">
+                        <select id="supportedmySelect" onchange="myselection()"
+                            class="is-invalid1 inline-block w-full py-2 px-4 text-gray-500 border rounded outline-none border-red-400 focus:shadow ">
+                            <option value="noselect" selected="">Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <h1 id="supportedmyselecthide" class="text-xs text-red-400 mt-1">Example invalid select feedback</h1>
+                    </div>
+                    <div class="mb-0">
+                        <input type="file" id="choose2"
+                            class="is-invalid block w-full border border-red-400 text-gray-500 rounded outline-none focus:shadow ">
+                        <h1 id="supportedchoosehide" class="text-xs text-red-400 mt-1">Example invalid form the feedback</h1>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--sec col-->
+
+    <div class="w-full lg:w-2/4 lg:pl-3">
+        <div class="relative flex flex-col mb-8 bg-white rounded-lg shadow-lg">
+            <div class="flex justify-between flex-auto px-6 pt-6">
+                <div>
+                    <h4 class="text-2xl font-medium">Custom Validation</h4>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-500 mt-0 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                    vulputate, ex ac venenatis mollis, diam nibh finibus leo</p>
+                <form>
+                    <div class="flex flex-wrap">
+                        <div class="flex-auto lg:w-2/4 w-full lg:pr-2 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">First name</label>
+                            <div class="relative flex items-stretch w-full">
+                                <input type="text"
+                                    class="block w-full px-4 py-2 text-gray-600 border rounded outline-none focus:border-blue-500 focus:shadow hover:border-blue-500"
+                                    id="customfirstname" autocomplete="off">
+                            </div>
+                            <div id="customfnamemsg" class="hidden text-green-400"> Looks Good</div>
+                        </div>
+                        <div class="flex-auto lg:w-2/4 w-full lg:pl-2 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">Last name</label>
+                            <div class="relative flex items-stretch w-full">
+                                <input type="text"
+                                    class="block w-full px-4 py-2 text-gray-600 border rounded outline-none focus:border-blue-500 focus:shadow hover:border-blue-500"
+                                    id="customlastname" autocomplete="off">
+                            </div>
+                            <div id="customlnamemsg" class="hidden text-green-400"> Looks Good</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <div class="flex-auto lg:w-2/4 w-full lg:pr-2 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">Username</label>
+                            <div class="relative flex items-stretch w-full">
+                                <span
+                                    class="flex text-gray-600 items-center px-4 py-2 border-t border-b border-l rounded whitespace-nowrap"
+                                    id="basic-addon1">@</span>
+                                <input type="text"
+                                    class="block w-full text-gray-600 px-4 py-2 border outline-none focus:border-blue-500 focus:shadow hover:border-blue-500"
+                                    id="customusername" autocomplete="off">
+                            </div>
+                            <div id="customusermsg" class="hidden text-red-400">Please choose a username.</div>
+                        </div>
+                        <div class="flex-auto lg:w-2/4 w-full lg:pl-2 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">City</label>
+                            <div class="relative flex items-stretch w-full">
+                                <input type="text"
+                                    class="block w-full px-4 py-2 text-gray-600 border rounded outline-none focus:border-blue-500 focus:shadow hover:border-blue-500"
+                                    id="customcity" autocomplete="off">
+                            </div>
+                            <div id="customcitymsg" class="hidden text-red-400">Please provide a valid city.</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <div class="flex-auto lg:w-2/4 w-full lg:pr-2 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">State</label>
+                            <div>
+                                <select id="customstate"
+                                    class="inline-block w-full py-2 px-4 text-gray-600 border rounded outline-none hover:border-blue-500">
+                                    <option value="noselect" selected="">Choose...</option>
+                                    <option value="1">...</option>
+                                </select>
+                            </div>
+                            <div id="customstatemsg" class="hidden text-red-400">Please select a valid state.</div>
+                        </div>
+                        <div class="flex-auto lg:w-2/4 w-full lg:pl-2 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">Zip</label>
+                            <div class="relative flex items-stretch w-full">
+                            <input type="text" class="block w-full px-4 py-2 text-gray-600 border rounded-tl outline-none focus:border-blue-500 focus:shadow hover:border-blue-500" id="customzip" autocomplete="off">
+                            </div>
+                            <div id="customzipmsg" class="hidden text-red-400">Please provide a valid zip.</div>
+                        </div>
+                    </div>
+                    <div class="mb-4 checkbox">
+                        <div class="pl-6 mb-2">
+                            <input id="customvalidationcheckbox"
+                                class="float-left w-4 h-4 mt-1 -ml-6 border border-blue-500 rounded"
+                                type="checkbox" >
+                            <label id="customcheckboxlabel" class="text-gray-600"
+                                for="customvalidationcheckbox">Agree to terms and conditions
+                            </label>
+                            <div id="customterms&condn" class="hidden text-red-400">You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="button" onclick="validate();validate1()" class="inline-block p-2 px-6 py-2 text-center text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:bg-blue-600 hover:text-white">Submit Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="flex flex-col mb-8 bg-white rounded-lg shadow-lg">
+            <div class="flex justify-between flex-auto px-6 pt-6">
+                <div>
+                    <h4 class="text-2xl font-medium">Tooltips</h4>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac
+                    venenatis mollis, diam nibh finibus leo</p>
+                <form action="#">
+                    <div class="flex flex-wrap">
+                        <div class="relative flex-auto lg:w-2/4 w-full lg:pr-2 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">First name</label>
+                            <div class="flex items-stretch w-full mb-3">
+                                <input type="text" autocomplete="off"
+                                    class="block w-full px-4 py-2 text-gray-600 border rounded outline-none focus:border-blue-500 focus:shadow hover:border-blue-500"
+                                    id="tooltipfname" value="Mark">
+                            </div>
+                            <div id="tooltipfnamemsg"
+                                class="absolute -bottom-6 bg-green-500 text-white rounded p-1 hidden">Looks Good !</div>
+                        </div>
+                        <div class="relative flex-auto lg:w-2/4 w-full lg:pl-2 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">Last name</label>
+                            <div class="flex items-stretch w-full mb-3">
+                                <input type="text" autocomplete="off"
+                                    class="block w-full px-4 py-2 text-gray-600 border rounded outline-none focus:border-blue-500 focus:shadow hover:border-blue-500"
+                                    id="tooltiplname" value="Otto">
+                            </div>
+                            <div id="tooltiplnamemsg"
+                                class="absolute -bottom-6 bg-green-500 text-white rounded p-1 hidden">Looks Good !</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <div class="relative flex-auto lg:w-2/4 w-full lg:pr-2 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">Username</label>
+                            <div class="flex items-stretch w-full mb-3">
+                                <span
+                                    class="flex items-center text-gray-600 px-4 py-2 border-t border-b border-l rounded whitespace-nowrap"
+                                    id="basic-addon1">@</span>
+                                <input type="text" autocomplete="off" id="tooltipuser"
+                                    class="block w-full px-4 text-gray-600 py-2 border outline-none focus:border-blue-500 focus:shadow hover:border-blue-500"
+                                    name="username">
+                            </div>
+                            <div id="tooltipusernamemsg"
+                                class="absolute -bottom-12 z-10 bg-red-500 text-white rounded p-1 hidden">Please choose
+                                a unique and valid username.</div>
+                        </div>
+                        <div class="relative flex-auto lg:w-2/4 w-full lg:pl-3 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">City</label>
+                            <div class="flex items-stretch w-full mb-3">
+                                <input type="text" autocomplete="off" id="tooltipcity"
+                                    class="block w-full text-gray-600 px-4 py-2 border rounded outline-none focus:border-blue-500 focus:shadow hover:border-blue-500"
+                                    name="city">
+                            </div>
+                            <div id="tooltipcitymsg" class="absolute -bottom-6 bg-red-500 text-white rounded p-1 hidden">
+                                Please provide a valid city.</div>
+
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <div class="relative flex-auto lg:w-2/4 w-full lg:pr-2 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">State</label>
+                            <div>
+                                <select id="tooltipstate"
+                                    class="inline-block text-gray-600 w-full py-2 px-4 mb-3 border rounded outline-none hover:border-blue-500">
+                                    <option value="noselect" selected="">Choose...</option>
+                                    <option value="1">...</option>
+                                </select>
+                            </div>
+                            <div id="tooltipstatemsg" class="absolute -bottom-6 bg-red-500 text-white rounded p-1 hidden">
+                                Please select a valid state.</div>
+                        </div>
+                        <div class="relative flex-auto lg:w-2/4 w-full lg:pl-2 mb-4">
+                            <label class="inline-block mb-2 text-gray-600">Zip</label>
+                            <div class="flex items-stretch w-full mb-3">
+                                <input autocomplete="off"
+                                    class="block w-full px-4 py-2 text-gray-600 border rounded-tl outline-none focus:shadow hover:border-blue-500"
+                                    id="tooltipzip">
+                            </div>
+                            <div id="tooltipzipmsg" class="absolute -bottom-6 bg-red-500 text-white rounded p-1 hidden">
+                                Please provide a valid zip.</div>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="button" onclick="validation();"
+                            class="inline-block p-2 px-6 py-2 text-center text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:bg-blue-600 hover:text-white">
+                            Submit Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{/content}}
+{{/extend}}
